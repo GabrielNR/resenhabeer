@@ -65,7 +65,7 @@ export function Dashboard() {
         </div>
 
         <div>
-          <h6>Em Desenvolvimento</h6>
+          {/* <h6>Em Desenvolvimento</h6> */}
           <div className="grid grid-cols-9 gap-4">
             <RevenueChart />
             <PopularProductsChart />

@@ -34,9 +34,9 @@ export function AccountMenu() {
 
       <DropdownMenuContent align="end" className="w-56">
         <DropdownMenuLabel className="flex flex-col">
-          <span>Gabriel Nascimento</span>
+          <span>Resenha beer</span>
           <span className="text-xs font-normal text-muted-foreground">
-            gabrieldonascimento103@gmail.com
+            resenha@gmail.com
           </span>
         </DropdownMenuLabel>
         <DropdownMenuSeparator />

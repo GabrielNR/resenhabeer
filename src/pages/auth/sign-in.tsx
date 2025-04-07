@@ -1,16 +1,16 @@
 // Imports
 import { useForm } from 'react-hook-form'
 import { z } from 'zod'
-import { toast } from 'sonner'
-import { useNavigate } from "react-router-dom"
-import { useMutation } from '@tanstack/react-query'
+// import { toast } from 'sonner'
+// import { useNavigate } from "react-router-dom"
+// import { useMutation } from '@tanstack/react-query'
 
 import { Button } from "src/components/ui/button"
 import { Input } from "src/components/ui/input"
 import { Label } from "src/components/ui/label"
 import { Link } from "react-router-dom"
 
-import { signIn } from 'src/api/sign-in'
+// import { signIn } from 'src/api/sign-in'
 
 
 // Schema e Types
@@ -23,34 +23,34 @@ type SignInForm = z.infer<typeof signInForm>
 
 // Função Principal
 export function SignIn() {
-	const navigate = useNavigate()
+	// const navigate = useNavigate()
 
 	const {
     register,
-    handleSubmit,
+    // handleSubmit,
     formState: { isSubmitting },
   } = useForm<SignInForm>()
 
 	// Mutation
-	const {mutateAsync: authenticate} = useMutation({
-    mutationFn: signIn,
-  })
+	// const {mutateAsync: authenticate} = useMutation({
+  //   mutationFn: signIn,
+  // })
 
 	// Funções 
-	async function handleSignIn(data: SignInForm) {
-    try {
-      await authenticate({ 
-				email: data.email,
-				password: data.password 
-			})
+	// async function handleSignIn(data: SignInForm) {
+    // try {
+      // await authenticate({ 
+			// 	email: data.email,
+			// 	password: data.password 
+			// })
 
-			toast.success('Autenticação concluida')
+		// 	toast.success('Autenticação concluida')
 
-			navigate('/')
-    } catch (error) {
-      toast.error('Credenciais invalidas')
-    }
-  }
+		// 	navigate('/')
+    // } catch (error) {
+    //   toast.error('Credenciais invalidas')
+    // }
+  // }
 
 	return (
 	  <>
@@ -74,7 +74,7 @@ export function SignIn() {
 					</div>
 
 					<form 
-						onSubmit={handleSubmit(handleSignIn)}
+						// onSubmit={handleSubmit(handleSignIn)}
 						className="space-y-4"
 					>
 
