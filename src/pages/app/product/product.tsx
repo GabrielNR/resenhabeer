@@ -1,8 +1,8 @@
 import { Pencil, Search, X } from "lucide-react";
 import { z } from 'zod'
 import { useForm } from 'react-hook-form'
-import { useMutation, useQuery } from '@tanstack/react-query'
-import { toast } from "sonner";
+import { /*useMutation,*/ useQuery } from '@tanstack/react-query'
+// import { toast } from "sonner";
 import { useEffect, useState } from "react";
 import ScanbotSDK from "scanbot-web-sdk/ui";
 
@@ -12,9 +12,9 @@ import { Button } from "src/components/ui/button";
 import { Input } from "src/components/ui/input";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "src/components/ui/table";
 
-import { product } from 'src/api/product'
+// import { product } from 'src/api/product'
 import { listProduct } from 'src/api/listProduct'
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import { Pagination } from "src/components/pagination";
 
 const productForm = z.object({
@@ -36,9 +36,9 @@ export function Product() {
     // formState: { isSubmitting },
   } = useForm<ProductForm>()
 
-	const {mutateAsync: products} = useMutation({
-    mutationFn: product,
-  })
+	// const {mutateAsync: products} = useMutation({
+  //   mutationFn: product,
+  // })
 
   const {data: result} = useQuery({
     queryKey: ['list'],
