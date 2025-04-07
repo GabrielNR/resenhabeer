@@ -5,7 +5,7 @@
 // import { RevenueChart } from './components/revenue-chart'
 // import { PopularProductsChart } from './components/popular-products-chart'
 
-import { DollarSign } from "lucide-react";
+// import { DollarSign } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Card, CardHeader, CardTitle } from "src/components/ui/card";
 import { RevenueChart } from "./components/revenue-chart";

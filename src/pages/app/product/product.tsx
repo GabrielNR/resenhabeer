@@ -28,12 +28,12 @@ const productForm = z.object({
 type ProductForm = z.infer<typeof productForm>
 
 export function Product() {
-  const navigate = useNavigate()
+  // const navigate = useNavigate()
   
   const {
     register,
-    handleSubmit,
-    formState: { isSubmitting },
+    // handleSubmit,
+    // formState: { isSubmitting },
   } = useForm<ProductForm>()
 
 	const {mutateAsync: products} = useMutation({
@@ -46,25 +46,25 @@ export function Product() {
   })
 
   	// Funções 
-	async function handleProduct(data: ProductForm) {
-    try {
-      console.log(data)
+	// async function handleProduct(data: ProductForm) {
+  //   try {
+  //     console.log(data)
 
-      await products({ 
-				barcode: data.barcode,
-        name: data.name,
-        salePrice: Number(data.salePrice),
-        quantity: Number(data.quantity),
-        expirationDate: new Date()
-			})
+  //     await products({ 
+	// 			barcode: data.barcode,
+  //       name: data.name,
+  //       salePrice: Number(data.salePrice),
+  //       quantity: Number(data.quantity),
+  //       expirationDate: new Date()
+	// 		})
 
-      toast.success('Cadastro realizado com sucesso')
+  //     toast.success('Cadastro realizado com sucesso')
 
 
-    } catch (error) {
-      toast.error('Cadastro nao realizado')
-    }
-  }
+  //   } catch (error) {
+  //     toast.error('Cadastro nao realizado')
+  //   }
+  // }
 
   // // Codigo de barra
   const [scanResult, setScanResult] = useState<string>("");
